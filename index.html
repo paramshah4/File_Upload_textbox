@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Basic Index Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="drawImageBox.js"></script>
+  <script type="text/javascript" src="dragscroll.js"></script>
+	<style> 
+  .hiddenFileInput input{
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 99;
+  height: 100%;
+
+}
+.hiddenFileInput{
+  border: 1px solid #ccc;
+  width: 20%;
+  height: auto;
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 1px 2px;
+  height: 36px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  
+}
+.hiddenFileInput img{
+    width: 34px;
+    height: 34px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+
+}
+.filename_label{
+  position:absolute; 
+  cursor: pointer;
+  transform: translateY(50%);
+}
+.input_label{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  margin-left: 7px;
+}
+	</style>
+
+</head>
+<body>
+	<div class="container" style="margin-top:25px;">
+		<h2>File Upload</h2>
+        <span class="hiddenFileInput">
+            <img id="output-1" onclick="onImageClick(this)">
+            <div class="input_label" style="width: 100%;height: 100%;  cursor: pointer;">
+                <span id="filename-1" class="filename_label">Please upload</span>
+            <input type="file" id="fileimg-1" name="theFile" onchange="uploadImgFile(event,this)"/></div>
+        </span>
+       
+	</div>
+
+<div id="test">
+
+</div>
+</body>
+</html>
